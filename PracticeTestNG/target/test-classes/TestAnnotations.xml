@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="suite1">
+
+	<test name="Test1" enabled="true">
+		<groups>
+			<run>
+				<include name="sanity"></include>
+			</run>
+		</groups>
+		<classes>
+			<class name="Auto.NewTest"/>
+		</classes>
+
+		<!--		<classes>
+			<class name="Auto.NewTest">
+				<methods>
+					<include name="TestMethod1" />
+					<include name="TestMethod3"/>
+				</methods>
+			</class>
+		</classes>
+
+	</test>
+	<test name="Test2">
+		<parameter name="name" value="Haahahahahhahhaha" />
+		<parameter name="sirname" value="hihihihihhihuhuhuhuhu"></parameter>
+		<classes>
+			<class name="Auto.NewTest">
+				<methods>
+					<include name="TestMethod2" />
+				</methods>
+			</class>
+		</classes>
+-->
+
+	</test>
+</suite>

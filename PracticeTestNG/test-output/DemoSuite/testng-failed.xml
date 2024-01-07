@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoSuite]" guice-stage="DEVELOPMENT">
+  <parameter name="Browser" value="Chrome"/>
+  <test thread-count="5" name="OrangeHRMLogin(failed)">
+    <classes>
+      <class name="Auto.OrangeHRMLoginValidation">
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+        <methods>
+          <include name="VerifyLogin"/>
+          <include name="Teardown"/>
+          <include name="initilizeBrowser"/>
+          <include name="EnterLoginDetails"/>
+        </methods>
+      </class> <!-- Auto.OrangeHRMLoginValidation -->
+    </classes>
+  </test> <!-- OrangeHRMLogin(failed) -->
+  <test thread-count="5" name="OrangeHRMMyInfo(failed)">
+    <classes>
+      <class name="Auto.OrangeHRMLoginValidation">
+        <methods>
+          <include name="VerifyMyInfo"/>
+          <include name="LaunchApp"/>
+          <include name="Teardown"/>
+          <include name="NavigateToMyInfo"/>
+          <include name="EnterLoginDetails"/>
+          <include name="initilizeBrowser"/>
+        </methods>
+      </class> <!-- Auto.OrangeHRMLoginValidation -->
+    </classes>
+  </test> <!-- OrangeHRMMyInfo(failed) -->
+</suite> <!-- Failed suite [DemoSuite] -->

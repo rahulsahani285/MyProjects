@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="DemoSuite">
+<parameter name="Browser" value="Chrome" />
+	<test thread-count="5" name="OrangeHRMLogin">
+		
+		<classes>
+			<class name="Auto.OrangeHRMLoginValidation">
+				<methods>
+					<parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
+					<include name="LaunchApp"></include>
+					<include name="EnterLoginDetails"></include>
+					<include name="VerifyLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="OrangeHRMMyInfo">
+		<classes>
+			<class name="Auto.OrangeHRMLoginValidation">
+				<methods>
+					<include name="LaunchApp" />
+					<include name="EnterLoginDetails" />
+					<include name="NavigateToMyInfo" />
+					<include name="VerifyMyInfo" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="TestGoogle">
+		<classes>
+			<class name="Auto.TestingTestNG">
+				<methods>
+					<include name="test1"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
